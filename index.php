@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Soobway</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="main-div">
