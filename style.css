@@ -34,11 +34,9 @@ grid-row: 3/4;
 }
 form{
     display: block;
-    padding: 5%;
+    padding: 5%;                     
     text-align: center ;
-    position: relative;
-    
-    
+    position: relative;                
     
         
 }
@@ -217,13 +215,14 @@ h1{
   border: 2px solid red;
 } */
 
- form {
+ .res-form {
  width: 45%;
  max-width: 600px;
  margin: 80px auto 40px;
  padding: 20px 30px;
  background-color: #fabb7f;
  border-radius: 10px;
+ text-align: left;
 }
 
 .shadow {  /* keep shadow inside form content area */
@@ -250,12 +249,12 @@ h1{
   margin: 0 0 30px 0;
 }
 
-input[type="text"],
-input[type="date"],
-input[type="number"],
-input[type="time"],
-input[type="tel"],
-textarea {
+.res-form input[type="text"],
+.res-form input[type="date"],
+.res-form input[type="number"],
+.res-form input[type="time"],
+.res-form input[type="tel"],
+.res-form textarea {
   background-color: #e79140;
   border: none;
   font-size: 16px;
@@ -268,11 +267,11 @@ textarea {
   box-shadow: inset 0 2px 0 rgba(0, 0, 0, .05);
 }
 
-input[type="radio"] {
+.res-form input[type="radio"] {
   margin: 30px 60px 30px 0;
 }
 
-button {
+.res-form button {
   padding: 18px 35px;
   margin: 10px auto 20px;
   background-color: #ce4709;
@@ -286,12 +285,12 @@ button {
   box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1);
 }
 
-fieldset {
+.res-form fieldset {
   border: none;
   margin-bottom: 30px;
 }
 
-legend {
+.res-form legend {
   margin-bottom: 10px;
   font-size: 1.4em;
 }

@@ -2,11 +2,11 @@
 <html>
   <head>
     <title>Reservation</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="form-res">
-      <form class="shadow" action="" submit="POST">
+      <form class="res-form shadow" action="" submit="POST">
         <h1 id="res-title">Reservation</h1>
 
         <fieldset>
