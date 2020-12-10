@@ -210,3 +210,97 @@ h1{
 }
 
 /*************************  end of index page  ***********************************
+
+/*************************   Reservation Page  ***********************************/
+
+/* .form-res {
+  border: 2px solid red;
+} */
+
+ form {
+ width: 45%;
+ max-width: 600px;
+ margin: 80px auto 40px;
+ padding: 20px 30px;
+ background-color: #fabb7f;
+ border-radius: 10px;
+}
+
+.shadow {  /* keep shadow inside form content area */
+  position: relative;
+}
+.shadow::after { /* set up and positioning of background shadow */
+  z-index: -1;
+  position: absolute;
+  top: 1.3%;
+  right: 10%;
+  left: auto;
+  bottom: auto;
+  background: rgba(117, 117, 117, 0);
+  height: 50%;
+  content: "";
+  width: 10%;
+  transform: rotate(5deg);
+  box-shadow: 55px -10px 15px #757575;
+}
+
+#res-title {
+  text-align: center;
+  font-size: 2.25rem; /* 36/16 */
+  margin: 0 0 30px 0;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="time"],
+input[type="tel"],
+textarea {
+  background-color: #e79140;
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0 0 30px 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  color: white;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, .05);
+}
+
+input[type="radio"] {
+  margin: 30px 60px 30px 0;
+}
+
+button {
+  padding: 18px 35px;
+  margin: 10px auto 20px;
+  background-color: #ce4709;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 8px;
+  width: 100%;
+  border: 1px solid #933306;
+  border-width: 1px 1px 4px;
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1);
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 30px;
+}
+
+legend {
+  margin-bottom: 10px;
+  font-size: 1.4em;
+}
+
+
+.res-icon {
+  width: 6%;
+  margin: 0;
+  padding: 0;
+}
+
+/*************************  End of Reservation Page  ***********************************/
