@@ -32,7 +32,7 @@
                         $sql = "CREATE TABLE " . $tableName . "
                         (
                             Id int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                            Fistname varchar (200),
+                            Firstname varchar (200),
                             Lastname varchar (200),
                             Password varchar (200),
                             Email varchar (200)
