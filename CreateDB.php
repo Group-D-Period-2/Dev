@@ -34,8 +34,9 @@
                             Id int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
                             Firstname varchar (200),
                             Lastname varchar (200),
-                            Password varchar (200),
-                            Email varchar (200)
+                            Password varchar (200) NOT NULL,
+                            Email varchar (200) NOT NULL UNIQUE,
+                            Profile_Picture_Location varchar (200)
                         )";
                         $stmt = mysqli_prepare($conn, $sql)
                             or die("Preparation Error 1");
