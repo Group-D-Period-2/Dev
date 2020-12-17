@@ -11,7 +11,7 @@ and open the template in the editor.
     <title>Login</title>
     <style type="text/css">
         body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px;
+        .wrapper{ width: 350px; padding: 20px; }
     </head>
     <body>
         <?php
