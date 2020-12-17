@@ -6,12 +6,14 @@ and open the template in the editor.
 -->
 <html>
     <head>
-
+          
     <meta charset="UTF-8">
     <title>Login</title>
     <style type="text/css">
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
+    </style>
+
     </head>
     <body>
         <?php
@@ -109,7 +111,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     mysqli_close($link);
 }
         ?>
-            <div class="wrapper">
+
+    <div class="wrapper">
         <h2>Login</h2>
         <p>Please fill in your credentials to login.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -125,5 +128,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <p>Don't have an account? <a href="Registration.php">Sign up now</a>.</p>
         </form>
     </div>    
+
     </body>
 </html>
