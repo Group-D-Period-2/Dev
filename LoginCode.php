@@ -21,7 +21,8 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 }
  
 // Include config file
-require_once "config.php";
+            $conn = mysqli_connect("localhost", "root", "")
+            or die("Could not connect to database!");
  
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -31,10 +32,10 @@ $username_err = $password_err = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Check if username is empty
-    if(empty(trim($_POST["username"]))){
+    if(empty(trim($_POST["email"]))){
         $username_err = "Please enter username.";
     } else{
-        $username = trim($_POST["username"]);
+        $username = trim($_POST["email"]);
     }
     
     // Check if password is empty
@@ -47,7 +48,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT id, username, password FROM users WHERE username = ?";
+        $sql = "SELECT id, email, password FROM users WHERE username = ?";
         
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -91,8 +92,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             }
 
             // Close statement
-            mysqli_stmt_close($stmt);
+         $stmt = mysqli_prepare($conn, $sql)
+                    or die("Preperation error");
+                mysqli_stmt_execute($stmt)
+                    or die(mysqli_error($conn));
+                mysqli_stmt_close($stmt);
         }
+            mysqli_close($conn);
     }
     
     // Close connection
