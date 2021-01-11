@@ -1,56 +1,99 @@
 <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <?php// Include config file
+        $conn = mysqli_connect("localhost", "root", "")
+            or die("Could not connect to database!");
+        $databaseExists = mysqli_select_db($conn, "Restaurant");
 
-<head>
-  <title>Reservation</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+        // Define variables and initialize with empty values
+        $firstname = $lastname = $email = $password = "";
+        $firstname_err = $lastname_err = $email_err = $password_err = "";
+        $errors = 0;
+        
+        // Processing form data when form is submitted
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+            
+            // Validate firstname
+            if(empty(trim($_POST["CustomerID"]))){
+                $errors++;
+                $firstname_err = "Please enter a name.";
+            }
+            
+            // Validate lastname
+            if(empty(trim($_POST["Date"]))){
+                $errors++;
+                $lastname_err = "Please enter a date.";
+            }
+            
+            //Validate email
+            if(empty(trim($_POST["Groupsize"]))){
+                $errors++;
+                $email_err = "Please enter the size of your group.";
+            }
+            
+            if(empty(trim($_POST["Location"]))){
+                $errors++;
+                $password_err = "Please enter a location.";
+            }
+            
+            
+            // Check input errors before inserting in database
+            if($errors == 0){
+                $firstname = $_POST["CustomerID"];
+                $lastname = $_POST["Date"];
+                $email = $_POST["Groupsize"];
+                $password = $_POST["Location"];
+                
+                // Prepare an insert statement
+                $sql = "INSERT INTO `reservation`(`Customer_ID`, `Date_Time`, `Group_Size`, `Location_ID`) VALUES (\"" . $firstname . "\",\"" . $lastname . "\",\"" . $password . "\",\"" . $email . "\")";
+                
+                $stmt = mysqli_prepare($conn, $sql)
+                    or die("Preperation error");
+                mysqli_stmt_execute($stmt)
+                    or die(mysqli_error($conn));
+                mysqli_stmt_close($stmt);
+            }
+            // Close connection
+            mysqli_close($conn);
+        }
+        ?>
+        
+              <h2>Sign Up</h2>
+        <p>Please fill this form to create an account.</p>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                <label>Name</label>
+                <input type="text" name="CustomerID" class="form-control" value="<?php echo $firstname; ?>">
+                <span class="help-block"><?php echo $username_err; ?></span>
+                <br />
+                <label>Date</label>
+                <input type="password" name="Date" class="form-control" value="<?php echo $lastname; ?>">
+                <span class="help-block"><?php echo $lastname_err; ?></span>
+                <br />
+                <label>Group Size</label>
+                <input type="password" name="GroupSize" class="form-control" value="<?php echo $email; ?>">
+                <span class="help-block"><?php echo $email_err; ?></span>
+                <br />
+                <label>Location</label>
+                <input type="password" name="Location" class="form-control" value="<?php echo $password; ?>">
+                <span class="help-block"><?php echo $password_err; ?></span>
+                <br />
 
-<body>
-  <div class="form-res">
-    <form class="res-form shadow" action="" submit="POST">
-      <h1 id="res-title">Reservation</h1>
+                <input type="submit" class="btn btn-primary" value="Submit">
+                <input type="reset" class="btn btn-default" value="Reset">
+            <p>Already have an account? <a href="login.php">Login here</a>.</p>
+        </form>
+    </body>
+</html>
 
-      <fieldset>
-        <legend>Required Info</legend>
-
-        <label>Choose:</label><br />
-        <label>Sit In <input type="radio" value="Sit_In" name="user_choice"></label>
-        <label>Pick Up <input type="radio" value="Pick_up" name="user_choice"></label><br />
-
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="user_name"> <br />
-
-        <label for="lastname">Lastname:</label>
-        <input type="text" id="lastname" name="user_lastname"><br />
-
-        <label for="cell">Tel:</label>
-        <input type="tel" id="cell" name="user_tel"><br />
-
-        <!-- <label for="address">Address</label>
-          <input type="text" id="address" name="user_address"><br /> -->
-
-        <label for="date"><img class="res-icon" src="img/reservation/calendar.svg" alt="reservation icon"></label>
-        <input type="date" id="date" name="user_date"><br />
-
-        <label for="time"><img class="res-icon" src="img/reservation/time.svg" alt="clock icon"></label>
-        <input type="time" id="time" name="user_time">
-
-        <label for="people"><img class="res-icon" src="img/reservation/people.svg" alt="people icon"></label>
-        <input type="number" id="people" name="user_people">
-      </fieldset>
-
-      <fieldset>
-        <legend>Optional</legend>
-
-        <label for="special-request">Special Request</label>
-        <textarea id="special-request" name="user_request"></textarea><br />
-      </fieldset>
-
-      <button type="submit">Reserve</button>
-
-    </form>
-  </div>
-</body>
-
+    </body>
 </html>
