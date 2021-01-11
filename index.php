@@ -9,6 +9,7 @@
    <body>
       <div>
          <div class="header">
+            <header>
             <img class="logo-image" src="img/ourlogo.png">
             <nav>
                <ul class="nav">
