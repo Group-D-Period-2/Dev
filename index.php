@@ -21,9 +21,8 @@
                   <li><a href="">Sign Up</a> </li>
                </ul>
             </nav>
+            </header>
          </div>
-      </div>
-      </header>
       </div>
       <div class="main-div">
          <header class="main-header">
