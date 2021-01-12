@@ -19,8 +19,5 @@
                </ul>
             </nav>
             </header>
-         </div>
-		</div>
-
-</body>
+	</body>
 </html>
