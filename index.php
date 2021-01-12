@@ -7,23 +7,6 @@
       <link rel="stylesheet" type="text/css" href="style.css">
    </head>
    <body>
-      <div>
-         <div class="header">
-            <header>
-            <img class="logo-image" src="img/ourlogo.png">
-            <nav>
-               <ul class="nav">
-                  <li><a href="sandwich.html">Home</a> </li>
-                  <li><a href="">Reservation</a> </li>
-                  <li><a href="">Menu</a> </li>
-                  <li><a href="">Location</a> </li>
-                  <li><a href="">Newsupdate</a> </li>
-                  <li><a href="">Sign Up</a> </li>
-               </ul>
-            </nav>
-            </header>
-         </div>
-      </div>
       <div class="main-div">
          <header class="main-header">
             <h1>Soobway</h1>
