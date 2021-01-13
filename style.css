@@ -17,7 +17,7 @@ background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
 .header{
   /*grid-area: header;*/
-  position:fixed;
+  position:0;
   padding:0px;
   margin-bottom:5px;
   width:100%;
@@ -138,7 +138,6 @@ li {
 }
 
 .grid-container{
-  
   display: grid;
   grid-template-columns: 50px auto 50px;
   grid-template-rows: 12% auto 12%;
@@ -151,7 +150,6 @@ grid-row: 1/2;
 
 }
 .grid-main{
-margin: auto;
 width:100%;
 grid-column: 2/3 ;
 grid-row: 2/3;
@@ -250,7 +248,6 @@ float: left;
 margin: 2% 1% 0 7%;
 padding: 5px;
 text-align: center;
-cursor: pointer;
 }
 
 .deal-right{ /* left column in menu */
@@ -261,7 +258,6 @@ float: right;
 margin: 2% 7% 0 1%;
 padding: 5px;
 text-align: center;
-cursor: pointer;
 }
 
 .columns:after {     /* float clearfix */
@@ -316,7 +312,6 @@ height: 150px;
 padding: 5px;
 /* border: 1px solid green; */
 background-color: rgba(43, 43, 43, .7);
-cursor: pointer;
 }
 
 .side-image {

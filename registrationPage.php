@@ -83,7 +83,7 @@
                 <li><a href="menu.php">Menu</a> </li>
                 <li><a href="location.php">Location</a> </li>
                 <li><a href="registrationPage.php">Sign Up</a> </li>
-                <li><a href="">News update</a> </li>
+                <li><a href="About.php">About us</a> </li>
             </ul>
         </div>
         <div class="grid-main">
