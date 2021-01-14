@@ -77,17 +77,11 @@
     <div class="grid-container">
         <div class="grid-nav">
             <img class="logo-image" src="img/ourlogo.png">
-            <ul class="nav">
-                <li><a href="index.php">Home</a> </li>
-                <li><a href="reservation.php">Reservation</a> </li>
-                <li><a href="menu.php">Menu</a> </li>
-                <li><a href="location.php">Location</a> </li>
-                <li><a href="registrationPage.php">Sign Up</a> </li>
-                <li><a href="About.php">About us</a> </li>
-            </ul>
+            
         </div>
         <div class="grid-main">
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                <h2>Register</h2>
                 <div class="collumn">
                     <p><label>First Name</label></p>
                     <input type="text" name="firstname" class="form-control" autocomplete="off" value="<?php echo $firstname; ?>">
@@ -115,7 +109,25 @@
             </form>
         </div>
         <div class="grid-footer">
+            <div class="footer">
+                <img class="footer-logo-image" src="img/ourlogo.png" alt="brand-logo">
+            </div>
 
+            <div class="footer-2">
+                <h3>Contacts: </h3>
+                <p>Tel: +31590586656</p>
+                <p>email: soobway@gmail.com</p>
+            </div>
+
+            <div class="footer-3">
+                <h3>Follow us on:</h3>
+                <p id="social">
+                    <a href=""><img class="social" src="img/insta.png" alt="instagramLogo"></a>
+                    <a href=""><img class="social" src="img/insta.png" alt="instagramLogo"></a>
+                    <a href=""><img class="social" src="img/insta.png" alt="instagramLogo"></a>
+                </p>
+
+            </div>
         </div>
     </div>
 </body>

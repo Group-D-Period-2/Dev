@@ -83,6 +83,8 @@
     <div class="grid-container">
         <div class="grid-nav">
         <img class="logo-image" src="img/ourlogo.png">
+            
+     
         </div>
         <div class="grid-main">
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -91,10 +93,10 @@
                 <p><input type="text" name="email" class="form-control" autocomplete="off" value="<?php echo $email; ?>"></p>
                 <p><?php echo $email_err ?></p>
                 <p><label>Password</label></p>
-                <input type="password" name="password" class="form-control">
+                <p><input type="password" name="password" class="form-control"></p>
                 <p><?php echo $password_err ?></p>
-                <input type="submit" class="btn btn-primary" value="Login">
-                <p>Don't have an account? <a href="Registration.php">Sign up now</a>.</p>
+                <p><input type="submit" class="btn btn-primary" value="Login" id="button"></p>
+                <p> Don't have an account? <a href="Registration.php">Sign up now</a></p>
             </form>
 
 
