@@ -41,7 +41,7 @@
             
             // Check if password is empty
             if(empty(trim($_POST["password"]))){
-                $password_err = "Please enter your password.";
+                $password_err = "Please enter password.";
             } else {
                 $password = trim($_POST["password"]);
             }
@@ -91,10 +91,10 @@
             <h2>Login</h2>
                 <p><label>Email</label></p>
                 <p><input type="text" name="email" class="form-control" autocomplete="off" value="<?php echo $email; ?>"></p>
-                <p><?php echo $email_err ?></p>
+                <p><span><?php echo $email_err ?></span></p>
                 <p><label>Password</label></p>
                 <p><input type="password" name="password" class="form-control"></p>
-                <p><?php echo $password_err ?></p>
+                <p><span><?php echo $password_err ?></span></p>
                 <p><input type="submit" class="btn btn-primary" value="Login" id="button"></p>
                 <p> Don't have an account? <a href="Registration.php">Sign up now</a></p>
             </form>
@@ -116,8 +116,8 @@
                 <h3>Follow us on:</h3>
                 <p id="social">
                     <a href=""><img class="social" src="img/insta.png" alt="instagramLogo"></a>
-                    <a href=""><img class="social" src="img/insta.png" alt="instagramLogo"></a>
-                    <a href=""><img class="social" src="img/insta.png" alt="instagramLogo"></a>
+                    <a href=""><img class="social" src="img/linkedin.png" alt="instagramLogo"></a>
+                    <a href=""><img class="social" src="img/youtube.png" alt="instagramLogo"></a>
                 </p>
 
             </div>

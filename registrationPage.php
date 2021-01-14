@@ -123,8 +123,8 @@
                 <h3>Follow us on:</h3>
                 <p id="social">
                     <a href=""><img class="social" src="img/insta.png" alt="instagramLogo"></a>
-                    <a href=""><img class="social" src="img/insta.png" alt="instagramLogo"></a>
-                    <a href=""><img class="social" src="img/insta.png" alt="instagramLogo"></a>
+                    <a href=""><img class="social" src="img/linkedin.png" alt="instagramLogo"></a>
+                    <a href=""><img class="social" src="img/youtube.png" alt="instagramLogo"></a>
                 </p>
 
             </div>
