@@ -38,7 +38,7 @@
 					<h2>What We Offer!</h2>
 					<p>We are known for our wide variety of sandwiches passed on from generation to generation. Check out our menu and what we have to offer and be part of the Family!</p>
 					
-					<a href=""
+					<a href="menu.php">
 					<p><button class="button">Menu</button></p></a>
 					</div>
 				</div>	
@@ -50,7 +50,7 @@
 					<div class="container">
 					<h2>Locations Near You</h2>
 					<p>Discover A location near you and visit one of our kitchens and experience the best sandwiches.</p>
-					<a href="About.html">
+					<a href="location.php">
 					<p><button class="button">Location</button></p></a>
 					</div>
 				</div>	
