@@ -120,3 +120,39 @@ background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
   clear: both;
   display: table;
 }
+.footer-logo-image{
+  border-radius: 50%;
+  height: 80%;
+}
+.footer{
+  border: solid black;
+  padding-top: 20px;
+  padding-right: 20px;
+  text-align: right;
+  height: 100%;
+  width: 25%;
+  float: left;
+}
+.footer-3{
+  border: solid black;
+  width: 25%;
+  height: 100%;
+  padding-left: 10px;
+  float: left;
+  text-align: left;
+  font-size: 12px;
+  padding-top: 20px;
+  
+}
+.footer-2{
+  border: solid black;
+  width: 50%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 20px;
+}
+.social{
+  height: 25px;
+}
