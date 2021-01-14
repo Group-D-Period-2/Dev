@@ -2,27 +2,28 @@
 <html>
 <head>
 	<meta charset="UFT-8" content="text/html" content="width=device-width, initial-scale=1" http="content-type">
-	<link rel="stylesheet" href="about.css">
+	<link rel="stylesheet" href="style.css">
 	<title>SOOBWAY</title>
 </head>
 	<body>
-	
-		    <header>
-				<nav>
-					<img class="logo-image" src="img/ourlogo.png">
-					<ul class="nav">
-					<li><a href="sandwich.html">Home</a> </li>
-					<li><a href="">Reservation</a> </li>
-					<li><a href="">Menu</a> </li>
-					<li><a href="">Location</a> </li>
-					<li><a href="about.html">About Us</a> </li>
-					<li><a href="">Sign Up</a> </li>
-					</ul>
-				</nav>
-            </header>
-
+	<div>
+      <div class="header">
+         <img class="logo-image" src="img/ourlogo.png">
+         <nav>
+            <ul class="nav">
+               <li><a href="index.php">Home</a> </li>
+               <li><a href="reservation.php">Reservation</a> </li>
+               <li><a href="menu.php">Menu</a> </li>
+               <li><a href="location.php">Location</a> </li>
+               <li><a href="registrationPage.php">Sign Up</a> </li>
+               <li><a href="">Newsupdate</a> </li>
+            </ul>
+         </nav>
+      </div>
+   </div>
+   </header>
 		<div class="section">
-		<h1>About Us</h1>
+		<h3>About Us</h3>
 			
 			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 		</div>

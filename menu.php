@@ -32,10 +32,27 @@
       </div>
       <div class="Menu">
          <div class="single-menu">
-            <img src="img/images.jpg" alt="">
+            <img src="bacon-grilled-cheese.jpeg" alt="">
             <div class="Menu-content">
-               <h4>The legend Sandwich <span>$45</span></h4>
+               <h4>The Bacon Sandwich <span>$45</span></h4>
+               <p>Grilled bacon, bell pepper, red onion, cheese and curry mayonnaise</p>
+               <p>To order, press <a href="reservation.php">here</a></p>
+            </div>
+         </div>
+         <div class="single-menu">
+            <img src="grilled-cheese-ham.jpg" alt="">
+            <div class="Menu-content">
+               <h4>The Ham Sandwich <span>$45</span></h4>
+               <p>Grilled ham, bell pepper, red onion, cheese and curry mayonnaise</p>
+               <p>To order, press <a href="reservation.php">here</a></p>
+            </div>
+         </div>
+         <div class="single-menu">
+            <img src="download (1).jpg" alt="">
+            <div class="Menu-content">
+               <h4>The Mayo Sandwich<span>$45</span></h4>
                <p>Grilled chicken with bacon, bell pepper, red onion, cheese and curry mayonnaise</p>
+               <p>To order, press <a href="reservation.php">here</a></p>
             </div>
          </div>
          <div class="single-menu">
@@ -43,37 +60,29 @@
             <div class="Menu-content">
                <h4>The legend Sandwich <span>$45</span></h4>
                <p>Grilled chicken with bacon, bell pepper, red onion, cheese and curry mayonnaise</p>
+               <p>To order, press <a href="reservation.php">here</a></p>
             </div>
          </div>
          <div class="single-menu">
-            <img src="img/images.jpg" alt="">
+            <img src="download.jpg" alt="">
             <div class="Menu-content">
-               <h4>The legend Sandwich <span>$45</span></h4>
-               <p>Grilled chicken with bacon, bell pepper, red onion, cheese and curry mayonnaise</p>
+               <h4>The Plain Veg <span>$45</span></h4>
+               <p>Good for the vegeterians, just a total vegetable sandwich </p>
+               <p>To order, press <a href="reservation.php">here</a></p>
             </div>
          </div>
          <div class="single-menu">
-            <img src="img/images.jpg" alt="">
+            <img src="bacon-grilled-cheese.jpg" alt="">
             <div class="Menu-content">
                <h4>The legend Sandwich <span>$45</span></h4>
-               <p>Grilled chicken with bacon, bell pepper, red onion, cheese and curry mayonnaise</p>
-            </div>
-         </div>
-         <div class="single-menu">
-            <img src="img/images.jpg" alt="">
-            <div class="Menu-content">
-               <h4>The legend Sandwich <span>$45</span></h4>
-               <p>Grilled chicken with bacon, bell pepper, red onion, cheese and curry mayonnaise</p>
-            </div>
-         </div>
-         <div class="single-menu">
-            <img src="img/images.jpg" alt="">
-            <div class="Menu-content">
-               <h4>The legend Sandwich <span>$45</span></h4>
-               <p>Grilled chicken with bacon, bell pepper, red onion, cheese and curry mayonnaise</p>
+               <p>This is a well grilled becon cheese sandwich,</p>
+               <p>To order, press <a href="reservation.php">here</a></p>
             </div>
          </div>
       </div>
+       <div class="grid-footer">
+
+   </div>
    </div>
 </body>
 
