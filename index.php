@@ -17,7 +17,7 @@
                <li><a href="menu.php">Menu</a> </li>
                <li><a href="location.php">Location</a> </li>
                <li><a href="registrationPage.php">Sign Up</a> </li>
-               <li><a href="">Newsupdate</a> </li>
+               <li><a href="Aboutus.php"> About Us</a> </li>
             </ul>
          </nav>
       </div>
