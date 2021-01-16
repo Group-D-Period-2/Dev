@@ -7,4 +7,9 @@
 
             </div>
         </div>
-        <?php include('inc/footer.php'); ?>
+        <footer>
+         <?php include('inc/footer.php'); ?>
+         </footer>
+         </div>
+   </body>
+</html>
