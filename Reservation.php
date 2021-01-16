@@ -10,7 +10,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <?php// Include config file
+        <?php
         $conn = mysqli_connect("localhost", "root", "")
             or die("Could not connect to database!");
         $databaseExists = mysqli_select_db($conn, "Restaurant");

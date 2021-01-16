@@ -497,9 +497,9 @@ padding: 0;
 /*************************  End of Reservation Page  ***********************************/
 /*This is menu section*/
 .wrapper{
-width: 1200px;
-margin: 100px;
+width: 100%;
 }
+
 .title{
 text-align: center;
 margin-bottom: 60px;
