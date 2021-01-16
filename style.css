@@ -190,7 +190,7 @@ form p{
   padding-bottom: 10px;
 }
 
-
+/****************************************  homepage  ****************************************/
 .main-header {
 height:600px;
 background: linear-gradient(0deg, #fff, transparent 55%),
@@ -339,6 +339,62 @@ text-align: center;
 margin: 40px auto;
 font-size: 1.5625rem; /* 25/16 */
 line-height: 1.5;
+}
+
+@media (max-width: 735px) {
+	.nav {
+		flex-wrap: wrap;	
+		font-size: 90%;	
+		line-height: 150%;
+		
+	}
+	
+	.header-tag {
+		border: none;
+		padding: none;	
+		font-size: 1.875em; /* 30/16 */
+	}
+	
+	h1 {
+		margin: 70px 0 20px;
+		font-size: 70px;
+	}
+	
+	.main-header {
+		height: 300px;
+	}
+	
+	.menu-layout {
+		width: 100%;
+		height: auto;		
+	}
+	
+	.menu-layout article h4 {
+		letter-spacing: normal;
+		font-style: italic;
+	}
+	
+	.side-dish article h4 {
+		font-size: 10px;
+	}
+	
+	.side-right {
+		padding: 0;
+	}
+	
+	.side-image {
+		width: 50%;
+	}
+	
+	.side-layout {
+		width: 75%;
+		margin: 12% 0 0 12%;
+	}
+	
+	.customer-reminder {
+		font-size: 15px;
+		text-align: center;
+	}
 }
 
 /*************************  end of index page  ***********************************
