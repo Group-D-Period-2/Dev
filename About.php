@@ -1,27 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UFT-8" content="text/html" content="width=device-width, initial-scale=1" http="content-type">
-	<link rel="stylesheet" href="style.css">
-	<title>SOOBWAY</title>
-</head>
-	<body>
-	<div>
-      <div class="header">
-         <img class="logo-image" src="img/ourlogo.png">
-         <nav>
-            <ul class="nav">
-               <li><a href="index.php">Home</a> </li>
-               <li><a href="reservation.php">Reservation</a> </li>
-               <li><a href="menu.php">Menu</a> </li>
-               <li><a href="location.php">Location</a> </li>
-               <li><a href="registrationPage.php">Sign Up</a> </li>
-               <li><a href="about.php">About Us</a> </li>
-            </ul>
-         </nav>
-      </div>
-   </div>
-   </header>
+	<?php 
+	$pageTitle = "About Us";
+	$underline = "a";
+	include('inc/header.php'); ?>
 		<div class="section">
 		<h3>About Us</h3>
 			
@@ -56,28 +36,6 @@
 				</div>	
 			</div>			
 		</div>
-
+	<?php include('inc/footer.php'); ?>
 		
-			 <footer>
-			 <div class="footer">
-                <img class="footer-logo-image" src="img/ourlogo.png" alt="brand-logo">
-            </div>
-
-            <div class="footer-2">
-                <h3>Contacts: </h3>
-                <p>Tel: +31590586656</p>
-                <p>email: soobway@gmail.com</p>
-            </div>
-
-            <div class="footer-3">
-                <h3>Follow us on:</h3>
-                <p id="social">
-                    <a href=""><img class="social" src="img/insta.png" alt="instagramLogo"></a>
-                    <a href=""><img class="social" src="img/linkedin.png" alt="instagramLogo"></a>
-                    <a href=""><img class="social" src="img/youtube.png" alt="instagramLogo"></a>
-                </p>
-
-            </div>
-		</footer>	
-	</body>
-</html>
+		

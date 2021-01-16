@@ -1,28 +1,8 @@
-<!DOCTYPE html>
-<html>
-   <head>
-   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Soobway</title>
-      <link rel="stylesheet" type="text/css" href="style.css">
-   </head>
-   <body>
-      <div>
-      <div class="header">
-         <img class="logo-image" src="img/ourlogo.png">
-         <nav>
-            <ul class="nav">
-               <li><a href="index.php">Home</a> </li>
-               <li><a href="reservation.php">Reservation</a> </li>
-               <li><a href="menu.php">Menu</a> </li>
-               <li><a href="location.php">Location</a> </li>
-               <li><a href="registrationPage.php">Sign Up</a> </li>
-               <li><a href="Aboutus.php"> About Us</a> </li>
-            </ul>
-         </nav>
-      </div>
-   </div>
-   </header>
+	<?php 
+		$pageTitle = "Soobway";
+		$underline = "h";
+		include('inc/header.php');
+	?>
 
       <div class="main-div">
          <header class="main-header">
@@ -38,33 +18,33 @@
                <div class="menu-layout columns">
                   <article class="deal-left">
                      <img class="icon-img" src="img/menu-icon.svg" alt="menu icon">
-                     <h4 class="deal-title">BURGER1 / $11</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur mattis quam et volutpat.</p>
+                     <h4 class="deal-title">The Bacon Sandwich / $45</h4>
+                     <p>Grilled bacon, bell pepper, red onion, cheese and curry mayonnaise</p>
                   </article>
                   <article class="deal-right">
                      <img class="icon-img" src="img/menu-icon.svg" alt="menu icon">
-                     <h4 class="deal-title">FRIES + BURGER 3 + DRINK / $19</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur mattis quam et volutpat.</p>
+                     <h4 class="deal-title">The Ham Sandwich / $45</h4>
+                     <p>Grilled ham, bell pepper, red onion, cheese and curry mayonnaise.</p>
                   </article>
                   <article class="deal-left">
                      <img class="icon-img" src="img/menu-icon.svg" alt="menu icon">
-                     <h4 class="deal-title">BURGER 3 / $9</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur mattis quam et volutpat.</p>
+                     <h4 class="deal-title">The Mayo Sandwich / $45</h4>
+                     <p>Grilled chicken with bacon, bell pepper, red onion, cheese and curry mayonnaise</p>
                   </article>
                   <article class="deal-right">
                      <img class="icon-img" src="img/menu-icon.svg" alt="menu icon">
-                     <h4 class="deal-title">BURGER 4 / $9</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur mattis quam et volutpat.</p>
+                     <h4 class="deal-title">The legend Sandwich / $45</h4>
+                     <p>Grilled chicken with bacon, bell pepper, red onion, cheese and curry mayonnaise</p>
                   </article>
                   <article class="deal-left">
                      <img class="icon-img" src="img/menu-icon.svg" alt="menu icon">
-                     <h4 class="deal-title">BURGER 5 / $8</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur mattis quam et volutpat.</p>
+                     <h4 class="deal-title">The Plain Veg / $45</h4>
+                     <p>Good for the vegeterians, just a total vegetable sandwich</p>
                   </article>
                   <article class="deal-right">
                      <img class="icon-img" src="img/menu-icon.svg" alt="menu icon">
-                     <h4 class="deal-title">FRIES + BURGER5 + DRINK / $18</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur mattis quam et volutpat.</p>
+                     <h4 class="deal-title">The legendary Sandwich / $45</h4>
+                     <p>This is a well grilled becon cheese sandwich</p>
                   </article>
                </div>
             </section>
@@ -103,27 +83,4 @@
                <p>See you next time</p>
             </section>
          </main>
-         <footer>
-         <div class="footer">
-                <img class="footer-logo-image" src="img/ourlogo.png" alt="brand-logo">
-            </div>
-
-            <div class="footer-2">
-                <h3>Contacts: </h3>
-                <p>Tel: +31590586656</p>
-                <p>email: soobway@gmail.com</p>
-            </div>
-
-            <div class="footer-3">
-                <h3>Follow us on:</h3>
-                <p id="social">
-                    <a href=""><img class="social" src="img/insta.png" alt="instagramLogo"></a>
-                    <a href=""><img class="social" src="img/linkedin.png" alt="instagramLogo"></a>
-                    <a href=""><img class="social" src="img/youtube.png" alt="instagramLogo"></a>
-                </p>
-
-            </div>
-         </footer>
-      </div>
-   </body>
-</html>
+    <?php include('inc/footer.php'); ?>
