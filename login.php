@@ -84,7 +84,7 @@
 
         <div class="grid-nav">
             <?php
-            $pageTitle = "Registration";
+            $pageTitle = "Login";
             $underline = "e";
             include('inc/header.php');
             ?>

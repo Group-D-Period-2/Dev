@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UFT-8" content="text/html" http-equiv="content-type">
@@ -16,8 +16,10 @@
                   <li><a href="">Location</a> </li>
                   <li><a href="about.html">About Us</a> </li>
                   <li><a href="">Sign Up</a> </li>
+                  <li><a href="">Login</a> </li>
                </ul>
             </nav>
             </header>
 	</body>
 </html>
+ -->

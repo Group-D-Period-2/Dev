@@ -18,32 +18,32 @@
                <div class="menu-layout columns">
                   <article class="deal-left">
                      <img class="icon-img" src="img/menu-icon.svg" alt="menu icon">
-                     <h4 class="deal-title">The Bacon Sandwich / $45</h4>
+                     <h4 class="deal-title">The Bacon Sandwich / &#8364;21</h4>
                      <p>Grilled bacon, bell pepper, red onion, cheese and curry mayonnaise</p>
                   </article>
                   <article class="deal-right">
                      <img class="icon-img" src="img/menu-icon.svg" alt="menu icon">
-                     <h4 class="deal-title">The Ham Sandwich / $45</h4>
+                     <h4 class="deal-title">The Ham Sandwich / &#8364;15</h4>
                      <p>Grilled ham, bell pepper, red onion, cheese and curry mayonnaise.</p>
                   </article>
                   <article class="deal-left">
                      <img class="icon-img" src="img/menu-icon.svg" alt="menu icon">
-                     <h4 class="deal-title">The Mayo Sandwich / $45</h4>
+                     <h4 class="deal-title">The Mayo Sandwich / &#8364;13</h4>
                      <p>Grilled chicken with bacon, bell pepper, red onion, cheese and curry mayonnaise</p>
                   </article>
                   <article class="deal-right">
                      <img class="icon-img" src="img/menu-icon.svg" alt="menu icon">
-                     <h4 class="deal-title">The legend Sandwich / $45</h4>
+                     <h4 class="deal-title">The legend Sandwich / &#8364;20</h4>
                      <p>Grilled chicken with bacon, bell pepper, red onion, cheese and curry mayonnaise</p>
                   </article>
                   <article class="deal-left">
                      <img class="icon-img" src="img/menu-icon.svg" alt="menu icon">
-                     <h4 class="deal-title">The Plain Veg / $45</h4>
+                     <h4 class="deal-title">The Plain Veg / &#8364;10</h4>
                      <p>Good for the vegeterians, just a total vegetable sandwich</p>
                   </article>
                   <article class="deal-right">
                      <img class="icon-img" src="img/menu-icon.svg" alt="menu icon">
-                     <h4 class="deal-title">The legendary Sandwich / $45</h4>
+                     <h4 class="deal-title">The legendary Sandwich / &#8364;25</h4>
                      <p>This is a well grilled becon cheese sandwich</p>
                   </article>
                </div>
