@@ -16,12 +16,12 @@
     $databaseExists = mysqli_select_db($conn, "Restaurant");
 
     // Define variables and initialize with empty values
-    $firstname = $lastname = $email = $password = $confirm_password = "";
-    $firstname_err = $lastname_err = $email_err = $password_err = $confirm_password_err = "";
-    $errors = 0;
+    $firstname = $lastname = $email = $password = $confirm_password = $profile_picture = "";
+    $firstname_err = $lastname_err = $email_err = $password_err = $confirm_password_err = $profile_picture_err = "";
 
     // Processing form data when form is submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $errors = 0;
 
         // Validate firstname
         if (empty(trim($_POST["firstname"]))) {
@@ -53,6 +53,13 @@
             $errors++;
             $confirm_password_err = "Please fill in the same password as above.";
         }
+        
+        if (!empty($_FILES["profile_picture"]["name"])){
+            if($_FILES["profile_picture"]["type"] != "image/png" && $_FILES["profile_picture"]["type"] != "image/jpeg"){
+                $errors++;
+                $profile_picture_err = "Please pick an image.";
+            }
+        }
 
         // Check input errors before inserting in database
         if ($errors == 0) {
@@ -60,6 +67,32 @@
             $lastname = $_POST["lastname"];
             $email = $_POST["email"];
             $password = $_POST["password"];
+            
+            if(!empty($_FILES["profile_picture"]["name"])){
+                $target_dir = "uploads/";
+                $profile_picture = $target_dir . basename($_FILES["profile_picture"]["name"]);
+                
+                if (move_uploaded_file($_FILES["profile_picture"]["tmp_name"],$profile_picture)){
+                    // Prepare an insert statement
+            $sql = "INSERT INTO `Customer`(`Firstname`, `Lastname`, `Password`, `Email`,`Profile_Picture_Location`) VALUES (\"" . $firstname . "\",\"" . $lastname . "\",\"" . $password . "\",\"" . $email . "\",\"" . $profile_picture . ")";
+
+            $stmt = mysqli_prepare($conn, $sql)
+                or die("Preperation error");
+            mysqli_stmt_execute($stmt)
+                or die(mysqli_error($conn));
+            mysqli_stmt_close($stmt);
+                }
+            }else{
+                // Prepare an insert statement
+            $sql = "INSERT INTO `Customer`(`Firstname`, `Lastname`, `Password`, `Email`) VALUES (\"" . $firstname . "\",\"" . $lastname . "\",\"" . $password . "\",\"" . $email . "\")";
+
+            $stmt = mysqli_prepare($conn, $sql)
+                or die("Preperation error");
+            mysqli_stmt_execute($stmt)
+                or die(mysqli_error($conn));
+            mysqli_stmt_close($stmt);
+                
+            }
 
             // Prepare an insert statement
             $sql = "INSERT INTO `Customer`(`Firstname`, `Lastname`, `Password`, `Email`) VALUES (\"" . $firstname . "\",\"" . $lastname . "\",\"" . $password . "\",\"" . $email . "\")";
@@ -69,6 +102,7 @@
             mysqli_stmt_execute($stmt)
                 or die(mysqli_error($conn));
             mysqli_stmt_close($stmt);
+            
         }
         // Close connection
         mysqli_close($conn);
@@ -83,9 +117,9 @@
             ?>
         </div>
         <div class="grid-main">
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
                 <h2>Register</h2>
-
+                
                 <p><label>First Name</label></p>
                 <input type="text" name="firstname" class="form-control" autocomplete="off" value="<?php echo $firstname; ?>">
                 <p><span class="help-block"><?php echo $firstname_err; ?></span></p>
@@ -100,9 +134,12 @@
                 <p><label>Password</label></p>
                 <p><input type="password" name="password" class="form-control" autocomplete="off" value="<?php echo $password; ?>"></p>
                 <p><span class="help-block"><?php echo $password_err; ?></span></p>
-                <label>Confirm Password</label></p>
+                <p><label>Confirm Password</label></p>
                 <p><input type="password" name="confirm_password" class="form-control" autocomplete="off" value="<?php echo $confirm_password; ?>"></p>
                 <p><span class="help-block"><?php echo $confirm_password_err; ?></span></p>
+                <p><label>Profile Picture</label></p>
+                <p><input type="file" name="profile_picture" class="form-control" accept="image/png, image/jpeg"></p>
+                <p><span class="help-block"><?php echo $profile_picture_err; ?></span></p>
 
 
                 <input type="submit" class="btn btn-primary" value="Submit" id="button">
