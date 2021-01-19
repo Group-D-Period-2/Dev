@@ -1,4 +1,4 @@
-
+		<footer>
          <div class="footer">
                 <img class="footer-logo-image" src="img/ourlogo.png" alt="brand-logo">
             </div>
@@ -19,4 +19,4 @@
 
             </div>
          
-   
+		</footer>

@@ -83,9 +83,7 @@
                <p>See you next time</p>
             </section>
          </main>
-         <footer>
          <?php include('inc/footer.php'); ?>
-         </footer>
          </div>
    </body>
 </html>

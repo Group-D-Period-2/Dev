@@ -413,7 +413,7 @@ border: 2px solid red;
 .res-form {
 width: 45%;
 max-width: 600px;
-margin: 80px auto 40px;
+margin: 150px auto;
 padding: 20px 30px;
 background-color: #fabb7f;
 border-radius: 10px;
@@ -449,6 +449,7 @@ margin: 0 0 30px 0;
 .res-form input[type="number"],
 .res-form input[type="time"],
 .res-form input[type="tel"],
+.res-form select,
 .res-form textarea {
 background-color: #e79140;
 border: none;
@@ -496,6 +497,37 @@ width: 6%;
 margin: 0;
 padding: 0;
 }
+
+@media (max-width: 1000px) {
+	.shadow::after {
+		box-shadow: 40px -5px 15px #757575;
+	}	
+}
+
+
+@media (max-width: 840px) {
+	.res-form {
+		width:90%;
+	}
+}	
+
+
+@media (max-width: 460px) {
+	.shadow::after {
+		right: 14%;
+		width: 30%;
+	}	
+	
+	.res-form {
+		padding: 20px 20px;
+	}
+	
+	.res-form input[type="radio"] {
+    margin: 30px 40px 30px 0;
+	}
+}
+
+
 
 /*************************  End of Reservation Page  ***********************************/
 /*This is menu section*/

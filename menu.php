@@ -59,9 +59,7 @@ include('inc/header.php');
          </div>
       </div>
    </div>
-   <footer>
       <?php include('inc/footer.php'); ?>
-   </footer>
 </div>
 </body>
 
