@@ -30,7 +30,7 @@ include('inc/header.php'); ?>
           <input type="tel" id="cell" name="user_tel"><br />
 
            <label for="location">Location:</label>
-          <select id="location" name="user_location"><br /> 
+          <select id="location" name="user_location">
 			<option value="">Choose a location</option>
 			<option value="Emmen">Emmen</option>
 			<option value="Assen">Assen</option>

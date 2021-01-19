@@ -51,27 +51,27 @@
             <section class="side-dish">
                <div class="side-layout">
                   <article class="side-right">
-                     <img class="side-image" src="img/side-popular.svg">
+                     <img class="side-image" alt="side dishes" src="img/side-popular.svg">
                      <h4>POPULAR</h4>
                   </article>
                   <article class="side-right">
-                     <img class="side-image" src="img/side-chicken.svg">
+                     <img class="side-image" alt="side dishes" src="img/side-chicken.svg">
                      <h4>CHICKEN</h4>
                   </article>
                   <article class="side-right">
-                     <img class="side-image" src="img/side-icecream.svg">
+                     <img class="side-image" alt="side dishes" src="img/side-icecream.svg">
                      <h4>ICE CREAM</h4>
                   </article>
                   <article class="side-right">
-                     <img class="side-image" src="img/side-fries.svg">
+                     <img class="side-image" alt="side dishes" src="img/side-fries.svg">
                      <h4>FRIES</h4>
                   </article>
                   <article class="side-right">
-                     <img class="side-image" src="img/side-smoothie.svg"alt="Smoothies">
+                     <img class="side-image" alt="side dishes" src="img/side-smoothie.svg"alt="Smoothies">
                      <h4>SMOOTHIES</h4>
                   </article>
                   <article class="side-right">
-                     <img class="side-image" src="img/side-drink.svg">
+                     <img class="side-image" alt="side dishes" src="img/side-drink.svg">
                      <h4>DRINKS & MORE</h4>
                   </article>
                </div>
