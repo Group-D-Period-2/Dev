@@ -85,7 +85,7 @@
         <div class="grid-nav">
             <?php
             $pageTitle = "Login";
-            $underline = "e";
+            $underline = "t";
             include('inc/header.php');
             ?>
 
@@ -108,7 +108,7 @@
         </div>
         <div class="grid-footer">
 
-            <?php include('inc/footer.php'); ?>
+            <?php include('inc/gridFooter.php'); ?>
 
         </div>
     </div>

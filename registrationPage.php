@@ -138,7 +138,7 @@
                 <p><input type="password" name="confirm_password" class="form-control" autocomplete="off" value="<?php echo $confirm_password; ?>"></p>
                 <p><span class="help-block"><?php echo $confirm_password_err; ?></span></p>
                 <p><label>Profile Picture</label></p>
-                <p><input type="file" name="profile_picture" class="form-control" accept="image/png, image/jpeg"></p>
+                <p><input type="file" name="profile_picture" class="form-control"  class="pic" accept="image/png, image/jpeg"></p>
                 <p><span class="help-block"><?php echo $profile_picture_err; ?></span></p>
 
 
@@ -151,7 +151,7 @@
         </div>
         <div class="grid-footer">
 
-            <?php include('inc/footer.php'); ?>
+            <?php include('inc/gridFooter.php'); ?>
         </div>
         </div>
    </body>

@@ -18,7 +18,7 @@
                <a href="location.php"  class="<?php if($underline == "l") echo "line"; ?>">Location</a> 
                <a href="registrationPage.php"  class="<?php if($underline == "e") echo "line" ?>">Sign Up</a>
                <a href="About.php"  class="<?php if($underline == "a") echo "line"; ?>"> About Us</a> 
-                <a href="login.php"  class="<?php if($underline == "a") echo "line"; ?>"> Login </a>
+                <a href="login.php"  class="<?php if($underline == "t") echo "line"; ?>"> Login </a>
 
             
          </nav>
