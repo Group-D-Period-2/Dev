@@ -67,7 +67,7 @@
                      <h4>FRIES</h4>
                   </article>
                   <article class="side-right">
-                     <img class="side-image" alt="side dishes" src="img/side-smoothie.svg"alt="Smoothies">
+                     <img class="side-image" alt="side dishes" src="img/side-smoothie.svg">
                      <h4>SMOOTHIES</h4>
                   </article>
                   <article class="side-right">
