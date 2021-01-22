@@ -5,6 +5,7 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <?php 
+session_start();
 $pageTitle = "Reservation";
 $underline = "r";
 include('inc/header.php'); 
@@ -52,22 +53,18 @@ include('inc/header.php');
                 $errors++;
                 $Telephone_err = "Please enter a telephone number.";
             }
-            
-            
-            
 
             if($errors == 0){
-                $CustomerID = $_POST["CustomerID"];
+                $CustomerName = $_POST["CustomerID"];
                 $Date = $_POST["Date"];
                 $GroupSize = $_POST["GroupSize"];
                 $Location = $_POST["Location"];
                 $Telephone = $_POST["user_tel"];
                 $OptionalRequest = $_POST["user_request"];
                 $Time = $_POST["Time"];
-           
+                $CustomerID = $_SESSION["id"];
                 
-                var_dump($CustomerID);
-                $sql = "INSERT INTO `reservation`(`Name`, `Date`, `Group_Size`, `Location_ID`, `Telephone`, `OptionalRequest`, `Time`) VALUES (\"" . $CustomerID . "\",\"" . $Date . "\",\"" . $GroupSize . "\",\"" . $Location . "\",\"" . $Telephone . "\",\"" . $OptionalRequest . "\",\"" . $Time . "\")";
+                $sql = "INSERT INTO `Reservation`(`Customer_Id`, `Location_Id`, `Group_Size`, `Date`, `OptionalRequest`, `Telephone`, `Time`, `Name`) VALUES (" . $CustomerID . "," .$Location. "," .$GroupSize. ",\"" .$Date. "\",\"" .$OptionalRequest. "\",\"" .$Telephone. "\",\"" .$Time. "\",\"" .$CustomerName ."\")";
                 
                 $stmt = mysqli_prepare($conn, $sql)
                     or var_dump($sql);
@@ -102,11 +99,11 @@ include('inc/header.php');
            <label for="location">Location:</label>
           <select id="location" name="Location">
 			<option value="">Choose a location</option>
-			<option value="Emmen">Emmen</option>
-			<option value="Assen">Assen</option>
-			<option value="Zwolle">Zwolle</option>
-			<option value="Groningen">Groningen</option>
-			<option value="Volendam">Volendam</option>
+			<option value="1">Emmen</option>
+			<option value="2">Assen</option>
+			<option value="3">Zwolle</option>
+			<option value="4">Groningen</option>
+			<option value="5">Volendam</option>
 		  </select>
            <span class="help-block"><?php echo $Location_err; ?></span>
 

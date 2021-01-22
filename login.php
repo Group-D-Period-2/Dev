@@ -59,7 +59,6 @@
                 //Verify password
                 if ($customer['password'] == $password) {
                     // Password is correct, so start a new session
-                    session_start();
 
                     // Store data in session variables
                     $_SESSION["loggedin"] = true;
