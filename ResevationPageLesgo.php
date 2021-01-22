@@ -18,11 +18,16 @@ include('inc/header.php');
 
         // Define variables and initialize with empty values
         $CustomerID = $Date = $GroupSize = $Time = $Location = $Telephone = $OptionalRequest = "";
-        $CustomerID_err = $Date_err = $Time_err = $GroupSize_err = $Location_err = $Telephone_err = "";
+        $CustomerID_err = $Date_err = $Time_err = $GroupSize_err = $Location_err = $Telephone_err = $user_choice_err = "";
         $errors = 0;
         
         // Processing form data when form is submitted
         if($_SERVER["REQUEST_METHOD"] == "POST"){
+            
+            if(empty($_POST["user_choice"])){
+                $errors++;
+                $user_choice_err = "Please choose order type.";
+            }
    
             if(empty(trim($_POST["CustomerID"]))){
                 $errors++;
@@ -63,8 +68,9 @@ include('inc/header.php');
                 $OptionalRequest = $_POST["user_request"];
                 $Time = $_POST["Time"];
                 $CustomerID = $_SESSION["id"];
+                $Choice = $_POST["user_choice"];
                 
-                $sql = "INSERT INTO `Reservation`(`Customer_Id`, `Location_Id`, `Group_Size`, `Date`, `OptionalRequest`, `Telephone`, `Time`, `Name`) VALUES (" . $CustomerID . "," .$Location. "," .$GroupSize. ",\"" .$Date. "\",\"" .$OptionalRequest. "\",\"" .$Telephone. "\",\"" .$Time. "\",\"" .$CustomerName ."\")";
+                $sql = "INSERT INTO `Reservation`(`Customer_Id`, `Location_Id`, `Group_Size`, `Date`, `OptionalRequest`, `Telephone`, `Time`, `Name`, `Takeout`) VALUES (" . $CustomerID . "," .$Location. "," .$GroupSize. ",\"" .$Date. "\",\"" .$OptionalRequest. "\",\"" .$Telephone. "\",\"" .$Time. "\",\"" .$CustomerName ."\",". $Choice .")";
                 
                 $stmt = mysqli_prepare($conn, $sql)
                     or var_dump($sql);
@@ -85,8 +91,9 @@ include('inc/header.php');
           <legend>Required Info</legend>
 
           <label>Choose:</label><br />
-          <label>Sit In <input type="radio"  value="Sit_In" name="user_choice"></label>
-          <label>Pick Up <input type="radio"  value="Pick_up" name="user_choice"></label><br />
+          <label>Sit In <input type="radio"  value="0" name="user_choice"></label>
+          <label>Pick Up <input type="radio"  value="1" name="user_choice"></label><br />
+        <span class="help-block"><?php echo $user_choice_err; ?></span>
 
           <label for="name">Name:</label>
           <input type="text" id="CustomerID" name="CustomerID"> <br />
