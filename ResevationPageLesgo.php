@@ -7,6 +7,7 @@ and open the template in the editor.
 <?php 
 $pageTitle = "Reservation";
 $underline = "r";
+include('inc/header.php'); 
 
 
 
