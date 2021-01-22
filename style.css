@@ -612,3 +612,59 @@ font-style: italic;
 .h1{
   position: center;
 }
+
+/* About Page CSS */
+
+.section {
+  padding: 50px;
+  text-align: center;
+  background-color: background-color: #fff;
+background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+  color: #1e1e1e;
+}
+
+.column {
+  float: left;
+  width: 280px;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.part {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+#bread {
+	height: 190px;
+	width: 225px;
+}
+
+#location {
+	height: 190px;
+}
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
