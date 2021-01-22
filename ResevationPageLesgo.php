@@ -77,6 +77,8 @@ include('inc/header.php');
                 mysqli_stmt_execute($stmt)
                     or die(mysqli_error($conn));
                 mysqli_stmt_close($stmt);
+                
+                
             }
             // Close connection
             mysqli_close($conn);

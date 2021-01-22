@@ -9,9 +9,16 @@
 </head>
 
 <body>
-    <?php
-    // Initialize the session
-    session_start();
+    <div class="grid-container">
+
+        <div class="grid-nav">
+            <?php
+            $pageTitle = "Login";
+            $underline = "t";
+            include('inc/header.php');
+            ?>
+            
+            <?php
 
     // Check if the user is already logged in, if yes then redirect him to welcome page
     if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
@@ -49,7 +56,7 @@
         // Validate credentials
         if (empty($email_err) && empty($password_err)) {
             // Prepare a select statement
-            $sql = "SELECT id, email, password FROM Customer WHERE email = \"" . $email . "\"";
+            $sql = "SELECT id, email, password, Profile_Picture_Location FROM Customer WHERE email = \"" . $email . "\"";
             $result = $conn->query($sql);
 
             $customer = $result->fetch_assoc();
@@ -59,14 +66,15 @@
                 //Verify password
                 if ($customer['password'] == $password) {
                     // Password is correct, so start a new session
-
+                    
                     // Store data in session variables
                     $_SESSION["loggedin"] = true;
                     $_SESSION["id"] = $customer['id'];
                     $_SESSION["email"] = $email;
+                    $_SESSION["profile_pic"] = $customer["Profile_Picture_Location"];
 
                     // Redirect user to welcome page
-                    header("location: index.php");
+//                    header("location: index.php");
                 } else {
                     // Display an error message if password is not valid
                     $password_err = "The password you entered was not valid.";
@@ -78,15 +86,6 @@
         mysqli_close($conn);
     }
     ?>
-
-    <div class="grid-container">
-
-        <div class="grid-nav">
-            <?php
-            $pageTitle = "Login";
-            $underline = "t";
-            include('inc/header.php');
-            ?>
 
         </div>
         <div class="grid-main">
