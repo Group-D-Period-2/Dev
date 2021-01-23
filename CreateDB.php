@@ -6,7 +6,7 @@
     <body>
         <?php
         $databaseName = "Restaurant";
-        $tableNames = ["Customer", "Location", "Meal", "Reservation", "Takeout", "Orders"];
+        $tableNames = ["Customer", "Location", "Meal", "Reservation", "Orders"];
         
         $conn = mysqli_connect("localhost", "root", "")
             or die("Could not connect to database!");
@@ -52,6 +52,10 @@
                             Id int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
                             Name varchar (200),
                             Address varchar (200),
+                            Website varchar (200),
+                            PostalCode varchar (200),
+                            Telephone varchar (200),
+                            Hours varchar (200),
                             Seats int
                         )";
                         $stmt = mysqli_prepare($conn, $sql)
@@ -86,7 +90,11 @@
                             Customer_Id int UNSIGNED NOT NULL,
                             Location_Id int UNSIGNED NOT NULL,
                             Group_Size int,
-                            Date_Time DateTime,
+                            Date date,
+                            Time time,
+                            OptionalRequest varchar(1000),
+                            Telephone varchar(25),
+                            Name varchar(25),
                             FOREIGN KEY (Customer_Id) REFERENCES Customer(Id),
                             FOREIGN KEY (Location_Id) REFERENCES Location(Id)
                         )";
@@ -97,46 +105,68 @@
                         
                         mysqli_stmt_close($stmt);
                         break;
-                        
-                    case "Takeout":
-                        $sql = "CREATE TABLE " . $tableName . "
-                        (
-                            Id int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                            Customer_Id int UNSIGNED NOT NULL,
-                            Location_Id int UNSIGNED NOT NULL,
-                            DeliveryTime DateTime,
-                            FOREIGN KEY (Customer_Id) REFERENCES Customer(Id),
-                            FOREIGN KEY (Location_Id) REFERENCES Location(Id)
-                        )";
-                        $stmt = mysqli_prepare($conn, $sql)
-                            or die("Preparation Error 5");
-                        mysqli_stmt_execute($stmt)
-                            or die(mysqli_error($conn));
-                        
-                        mysqli_stmt_close($stmt);
-                        break;
-                        
-                    case "Orders":
-                        $sql = "CREATE TABLE " . $tableName . "
-                        (
-                            Meal_Id int UNSIGNED NOT NULL,
-                            Takeout_Id int UNSIGNED NOT NULL,
-                            Amount int,
-                            FOREIGN KEY (Meal_Id) REFERENCES Meal(Id),
-                            FOREIGN KEY (Takeout_Id) REFERENCES Takeout(Id),
-                            CONSTRAINT Compkey_MEALID_TAKEOUTID PRIMARY KEY (Meal_Id, Takeout_Id)
-                        )";
-                        $stmt = mysqli_prepare($conn, $sql)
-                            or die("Preparation Error 6");
-                        mysqli_stmt_execute($stmt)
-                            or die(mysqli_error($conn));
-                        
-                        mysqli_stmt_close($stmt);
-                        break;
                 }
             }
         }
         
+        $locations = [
+            [
+                "Name" => "Emmen",
+                "Address" => "",
+                "PostalCode" => "1012 WP Emmen",
+                "Website" => "soobway.nl",
+                "Telephone" => "020 6262 969",
+                "Hours" => "Mon - Sun: 9:00 AM - 5:00 PM",
+                "Seats" => 200
+            ],
+            [
+                "Name" => "Assen",
+                "Address" => "Nieuwendijk 6",
+                "PostalCode" => "012 MK Assen",
+                "Website" => "soobway.nl",
+                "Telephone" => "020 7893 905",
+                "Hours" => "Mon - Fri: 9:00 am - 4:00 pm, Sat - Sun: 9:00 am - 5:00 pm",
+                "Seats" => 200
+            ],
+            [
+                "Name" => "Zwolle",
+                "Address" => "",
+                "PostalCode" => "3511 AW Zwolle",
+                "Website" => "soobway.nl",
+                "Telephone" => "030 268 42 92",
+                "Hours" => "Mon - Fri: 9:00 am - 4:00 pm, Sat - Sun: 9:00 am - 5:00 pm",
+                "Seats" => 200
+            ],
+            [
+                "Name" => "Groningen",
+                "Address" => "Oudegracht 122",
+                "PostalCode" => "3511 Gronigen",
+                "Website" => "soobway.nl",
+                "Telephone" => "030 268 42 92",
+                "Hours" => "Mon - Fri: 9:00 am - 4:00 pm, Sat - Sun: 9:00 am - 5:00 pm",
+                "Seats" => 200
+            ],
+            [
+                "Name" => "Volendam",
+                "Address" => "Oudegracht 122",
+                "PostalCode" => "3511 AW Volendam",
+                "Website" => "soobway.nl",
+                "Telephone" => "030 268 42 92",
+                "Hours" => "Mon - Fri: 9:00 am - 4:00 pm, Sat - Sun: 9:00 am - 5:00 pm",
+                "Seats" => 200
+            ]
+        ];
+            
+            foreach($locations as $location){
+                $sqlLocationInsert = "INSERT INTO `Location`(`Name`,`Address`,`PostalCode`,`Website`,`Telephone`,`Hours`,`Seats`) 
+                VALUES 
+                (\"" .$location["Name"]. "\",\"" .$location["Address"]. "\",\"" .$location["PostalCode"]. "\",\"" .$location["Website"]. "\",\"" .$location["Telephone"]. "\",\"" .$location["Hours"]. "\",\"" .$location["Seats"]. "\")";
+                $stmt = mysqli_prepare($conn, $sqlLocationInsert)
+                    or die(mysqli_error($conn));
+                mysqli_stmt_execute($stmt)
+                    or die(mysqli_error($conn));
+                mysqli_stmt_close($stmt);
+            }
         ?>
         <p>
             Database should be created
