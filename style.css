@@ -618,7 +618,8 @@ font-style: italic;
 .section {
   padding: 50px;
   text-align: center;
-  background-color: background-color: #fff;
+  background-color: #fff;
+  background-image: ;
   color: #1e1e1e;
 }
 
