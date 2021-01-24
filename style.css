@@ -459,7 +459,7 @@ margin: 0 0 30px 0;
 background-color: #e79140;
 border: none;
 font-size: 16px;
-height: auto;
+max-height: 60px;
 margin: 0 0 30px 0;
 outline: 0;
 padding: 15px;
