@@ -38,6 +38,10 @@
              ?>
              <a href="login.php"  class="<?php if($underline == "t") echo "line"; ?>"> Login </a>
              <?php
+             }else{
+             ?>
+             <a href="logout.php">Logout</a>
+             <?php
              }
              ?>
           </nav>
@@ -46,7 +50,7 @@
           if(isset($_SESSION["profile_pic"]) && $_SESSION["profile_pic"] != null)
           {
           ?>
-          <img class="ac-image" src="<?php echo $_SESSION["profile_pic"] ?>" alt="pfp">
+          <img class="logo-image" src="<?php echo $_SESSION["profile_pic"] ?>" alt="pfp">
           <?php
           }
           ?>

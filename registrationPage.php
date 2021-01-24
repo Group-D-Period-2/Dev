@@ -69,7 +69,6 @@
             $password = $_POST["password"];
             
             if(!empty($_FILES["profile_picture"]["name"])){
-                var_dump(1);
                 $target_dir = "uploads/";
                 $profile_picture = $target_dir . basename($_FILES["profile_picture"]["name"]);
                 
