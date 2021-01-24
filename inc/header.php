@@ -46,7 +46,7 @@
           if(isset($_SESSION["profile_pic"]) && $_SESSION["profile_pic"] != null)
           {
           ?>
-          <img class="logo-image" src="<?php echo $_SESSION["profile_pic"] ?>" alt="pfp">
+          <img class="ac-image" src="<?php echo $_SESSION["profile_pic"] ?>" alt="pfp">
           <?php
           }
           ?>

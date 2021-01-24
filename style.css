@@ -91,7 +91,10 @@ span{
    padding-right:150px;
    text-align: center-left;
 }
-
+.ac-image{
+  height: 90%;
+  border-radius: 50%;
+}
 
 .logo-image {
  height:100%;
