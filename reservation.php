@@ -89,8 +89,8 @@ include('inc/header.php');
         <fieldset>
           <legend>Required Info</legend>
           <label>Choose:</label><br />
-          <label>Sit In <input type="radio"  value="0" name="user_choice"></label>
-          <label>Pick Up <input type="radio"  value="1" name="user_choice"></label><br />
+          <label>Sit In <input type="radio"  value="false" name="user_choice"></label>
+          <label>Pick Up <input type="radio"  value="true" name="user_choice"></label><br />
         <span class="help-block"><?php echo $user_choice_err; ?></span>
 
           <label for="name">Name:</label>
@@ -137,4 +137,3 @@ include('inc/header.php');
       </form>
     </div>
 	<?php include('inc/footer.php'); ?> 
-	

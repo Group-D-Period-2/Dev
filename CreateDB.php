@@ -6,7 +6,7 @@
     <body>
         <?php
         $databaseName = "Restaurant";
-        $tableNames = ["Customer", "Location", "Meal", "Reservation", "Orders"];
+        $tableNames = ["Customer", "Location", "Meal", "Reservation"];
         
         $conn = mysqli_connect("localhost", "root", "")
             or die("Could not connect to database!");
@@ -94,6 +94,7 @@
                             Time time,
                             OptionalRequest varchar(1000),
                             Telephone varchar(25),
+                            Takeout varchar(25),
                             Name varchar(25),
                             FOREIGN KEY (Customer_Id) REFERENCES Customer(Id),
                             FOREIGN KEY (Location_Id) REFERENCES Location(Id)

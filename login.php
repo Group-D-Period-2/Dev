@@ -74,7 +74,7 @@
                     $_SESSION["profile_pic"] = $customer["Profile_Picture_Location"];
 
                     // Redirect user to welcome page
-//                    header("location: index.php");
+                    header("location: index.php");
                 } else {
                     // Display an error message if password is not valid
                     $password_err = "The password you entered was not valid.";

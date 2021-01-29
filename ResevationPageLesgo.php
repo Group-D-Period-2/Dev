@@ -72,7 +72,7 @@ include('inc/header.php');
                 $sql = "INSERT INTO `Reservation`(`Customer_Id`, `Location_Id`, `Group_Size`, `Date`, `OptionalRequest`, `Telephone`, `Time`, `Name`, `Takeout`) VALUES (" . $CustomerID . "," .$Location. "," .$GroupSize. ",\"" .$Date. "\",\"" .$OptionalRequest. "\",\"" .$Telephone. "\",\"" .$Time. "\",\"" .$CustomerName ."\",". $Choice .")";
                 
                 $stmt = mysqli_prepare($conn, $sql)
-                    or var_dump($sql);
+                    or var_dump(mysqli_error($conn));
                 mysqli_stmt_execute($stmt)
                     or die(mysqli_error($conn));
                 mysqli_stmt_close($stmt);
@@ -92,8 +92,8 @@ include('inc/header.php');
           <legend>Required Info</legend>
 
           <label>Choose:</label><br />
-          <label>Sit In <input type="radio"  value="0" name="user_choice"></label>
-          <label>Pick Up <input type="radio"  value="1" name="user_choice"></label><br />
+          <label>Sit In <input type="radio"  value="false" name="user_choice"></label>
+          <label>Pick Up <input type="radio"  value="true" name="user_choice"></label><br />
         <span class="help-block"><?php echo $user_choice_err; ?></span>
 
           <label for="name">Name:</label>
@@ -140,4 +140,3 @@ include('inc/header.php');
       </form>
     </div>
 	<?php include('inc/footer.php'); ?> 
-	
