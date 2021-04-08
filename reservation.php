@@ -1,9 +1,8 @@
 <!doctype HTML>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<head>
+    <title>Make a Reservation. Now.</title>
+</head>
+
 <?php 
 $pageTitle = "Reservation";
 $underline = "r";
@@ -67,13 +66,24 @@ include('inc/header.php');
                 $CustomerID = $_SESSION["id"];
                 $Choice = $_POST["user_choice"];
                 
-                $sql = "INSERT INTO `Reservation`(`Customer_Id`, `Location_Id`, `Group_Size`, `Date`, `OptionalRequest`, `Telephone`, `Time`, `Name`, `Takeout`) VALUES (" . $CustomerID . "," .$Location. "," .$GroupSize. ",\"" .$Date. "\",\"" .$OptionalRequest. "\",\"" .$Telephone. "\",\"" .$Time. "\",\"" .$CustomerName ."\",". $Choice .")";
+                $sql = $conn->prepare("INSERT INTO `Reservation`(`Customer_Id`, `Location_Id`, `Group_Size`, `Date`, `OptionalRequest`, `Telephone`, `Time`, `Name`, `Takeout`) VALUES 
+                         (
+                         ?,
+                         ?,
+                         ?,
+                         ?,
+                         ?,
+                         ?,
+                         ?,
+                         ?,
+                         ?
+                         )");
                 
-                $stmt = mysqli_prepare($conn, $sql)
-                    or var_dump($sql);
-                mysqli_stmt_execute($stmt)
+               
+                $sql->bind_param("sssssssss" ,$CustomerID, $Location, $GroupSize, $Date, $OptionalRequest, $Telephone, $Time, $CustomerName, $Choice);
+                mysqli_stmt_execute($sql)
                     or die(mysqli_error($conn));
-                mysqli_stmt_close($stmt);
+                mysqli_stmt_close($sql);
                 
                 
             }

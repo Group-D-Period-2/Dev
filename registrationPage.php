@@ -74,24 +74,30 @@
                 
                 if (move_uploaded_file($_FILES["profile_picture"]["tmp_name"],$profile_picture)){
                     // Prepare an insert statement
-            $sql = "INSERT INTO `Customer`(`Firstname`, `Lastname`, `Password`, `Email`,`Profile_Picture_Location`) VALUES (\"" . $firstname . "\",\"" . $lastname . "\",\"" . $password . "\",\"" . $email . "\",\"" . $profile_picture . "\")";
-
+            $sql = $conn->prepare("INSERT INTO `Customer`(`Firstname`, `Lastname`, `Password`, `Email`,`Profile_Picture_Location`) VALUES 
+                    (
+                    ?,
+                    ?,
+                    ?,
+                    ?,
+                    ?
+                    )");
+            $sql->bind_param("sssss" ,$firstname, $lastname, $password, $email, $profile_picture);
                     
-            $stmt = mysqli_prepare($conn, $sql)
+
+            mysqli_stmt_execute($sql)
                 or die(mysqli_error($conn));
-            mysqli_stmt_execute($stmt)
-                or die(mysqli_error($conn));
-            mysqli_stmt_close($stmt);
+            mysqli_stmt_close($sql);
                 }
             }else{
-                // Prepare an insert statement
-                $sql = "INSERT INTO `Customer`(`Firstname`, `Lastname`, `Password`, `Email`) VALUES (\"" . $firstname . "\",\"" . $lastname . "\",\"" . $password . "\",\"" . $email . "\")";
-                $stmt = mysqli_prepare($conn, $sql)
-                    or die("Preperation error");
-                mysqli_stmt_execute($stmt)
-                    or die(mysqli_error($conn));
-                mysqli_stmt_close($stmt);
-            }
+            $sql = $conn->prepare("INSERT INTO `Customer`(`Firstname`, `Lastname`, `Password`, `Email`) VALUES 
+                    (
+                    ?,
+                    ?,
+                    ?,
+                    ?
+                    )");
+            $sql->bind_param("ssss", $firstname, $lastname, $password, $email);
             
             $sqlGet = "SELECT id, email, Profile_Picture_Location FROM Customer WHERE email = \"" . $email . "\"";
             $result = $conn->query($sqlGet);
@@ -111,6 +117,7 @@
         }
         // Close connection
         mysqli_close($conn);
+    }
     }
     ?>
 
