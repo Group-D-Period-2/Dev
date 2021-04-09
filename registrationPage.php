@@ -21,7 +21,7 @@
 
     // Processing form data when form is submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $errors = 0;
+                $errors = 0;
 
         // Validate firstname
         if (empty(trim($_POST["firstname"]))) {
@@ -59,6 +59,15 @@
                 $errors++;
                 $profile_picture_err = "Please pick an image.";
             }
+            if ($_FILES["profile_picture"]["size"] > 500000) {
+             $profile_picture_err = "Sorry, your file is too large.";
+             $errors++;
+             if ($_FILES["fileToUpload"]['name'] > 50 ) {
+             $profile_picture_err = "Sorry, your file name is too large.";
+             $errors++;
+}
+}
+
         }
 
         // Check input errors before inserting in database
